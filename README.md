@@ -6,7 +6,7 @@ A comprehensive web application for musicians to track, maintain, and manage the
 
 Musician Gear Tracker is a Progressive Web Application (PWA) designed to help musicians keep track of their instruments and equipment with specialized features for maintenance scheduling, condition monitoring, and valuation tracking. This application addresses a significant gap in the market for specialized tools that combine inventory management with maintenance tracking specifically tailored for musical equipment.
 
-## ✨ Features
+## ⚙ Features
 
 ### Core Features
 
@@ -105,7 +105,45 @@ docker-compose up
 2. For iOS: Tap the Share button and select "Add to Home Screen"
 3. For Android: Tap the menu button and select "Install App"
 
-## 🤝 Contributing
+## API Endpoints
+
+### Authentication
+
+- `POST /api/auth/register` - Register a new user
+- `POST /api/auth/login` - Login and get token
+- `GET /api/auth/profile` - Get user profile
+- `PUT /api/auth/profile` - Update user profile
+
+### Equipment
+
+- `GET /api/equipment` - Get all equipment for the authenticated user
+- `GET /api/equipment/:id` - Get a specific equipment item
+- `POST /api/equipment` - Create a new equipment item
+- `PUT /api/equipment/:id` - Update an equipment item
+- `DELETE /api/equipment/:id` - Delete an equipment item
+- `POST /api/equipment/:id/share` - Share equipment with another user
+
+### Maintenance
+
+- `GET /api/maintenance/equipment/:equipmentId` - Get all maintenance records for an equipment
+- `GET /api/maintenance/:id` - Get a specific maintenance record
+- `POST /api/maintenance` - Create a new maintenance record
+- `PUT /api/maintenance/:id` - Update a maintenance record
+- `DELETE /api/maintenance/:id` - Delete a maintenance record
+
+## Demo Accounts
+
+After running the database migration, you can use these demo accounts:
+
+1. Admin User:
+   - Email: admin@example.com
+   - Password: admin123
+
+2. Regular User:
+   - Email: musician@example.com
+   - Password: user123
+
+## 🙌 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
